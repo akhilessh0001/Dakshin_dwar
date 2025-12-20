@@ -131,6 +131,8 @@
       overflow: hidden;
       box-shadow: 0 15px 35px rgba(0,0,0,0.1);
       transition: 0.45s;
+      display: flex;
+      flex-direction: column;
     }
 
     .menu-card img {
@@ -145,12 +147,20 @@
     }
 
     .menu-card div {
-      padding: 25px;
+      padding: 25px 20px 30px; /* increased bottom padding to avoid clipping */
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
     }
 
     .menu-card h3 {
       color: #d2691e;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
+    }
+
+    .menu-card p {
+      line-height: 1.5;
     }
 
     /* ================= BOOK TABLE ================= */
@@ -166,16 +176,19 @@
     .booking form {
       max-width: 600px;
       margin: auto;
-      display: grid;
+      display: flex;
+      flex-direction: column;
       gap: 20px;
     }
 
     .booking input,
     .booking button {
+      width: 100%;
       padding: 14px 18px;
       border-radius: 30px;
       border: none;
       font-size: 1rem;
+      box-sizing: border-box;
     }
 
     .booking button {
@@ -201,17 +214,20 @@
     .contact form {
       max-width: 550px;
       margin: 30px auto;
-      display: grid;
+      display: flex;
+      flex-direction: column;
       gap: 18px;
     }
 
     .contact input,
     .contact textarea,
     .contact button {
+      width: 100%;
       padding: 14px 18px;
       border-radius: 30px;
       border: 1px solid #ccc;
       font-size: 1rem;
+      box-sizing: border-box;
     }
 
     .contact textarea {
@@ -241,6 +257,7 @@
       padding: 24px 32px;
       border-radius: 22px;
       box-shadow: 0 25px 50px rgba(0,0,0,0.28);
+      flex-wrap: wrap;
     }
 
     .map-text span {
@@ -279,6 +296,12 @@
     }
 
     /* ================= RESPONSIVE ================= */
+    @media (max-width: 992px) {
+      section {
+        padding: 70px 6%;
+      }
+    }
+
     @media (max-width: 768px) {
       nav {
         flex-direction: column;
@@ -287,6 +310,10 @@
 
       .hero h1 {
         font-size: 2.5rem;
+      }
+
+      .hero p {
+        font-size: 1.1rem;
       }
 
       .hero-actions a {
@@ -299,10 +326,29 @@
         grid-template-columns: 1fr;
       }
 
+      .menu-card div {
+        padding: 20px 15px 25px;
+      }
+
       .map-bar {
         flex-direction: column;
         gap: 15px;
         text-align: center;
+      }
+
+      .booking,
+      .contact {
+        padding: 60px 5%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      h2 {
+        font-size: 2rem;
       }
     }
 
@@ -342,39 +388,53 @@
 
 <section id="menu">
   <h2>Our Signature Menu</h2>
-
   <div class="menu">
     <div class="menu-card">
-        <img 
-            src="https://as1.ftcdn.net/v2/jpg/15/63/72/20/1000_F_1563722045_ELWXZ61UFU5XZXYclooZwrAqwCwZJg5F.jpg"
-            alt="Dosa">
-      <h3>Dosa</h3>
-      <p>Crispy dosa with served with chutney & sambar.</p>
+      <img src="https://as1.ftcdn.net/v2/jpg/15/63/72/20/1000_F_1563722045_ELWXZ61UFU5XZXYclooZwrAqwCwZJg5F.jpg" alt="Masala Dosa">
+      <div>
+        <h3>Masala Dosa</h3>
+        <p>Crispy dosa with spiced potato filling.</p>
+      </div>
     </div>
+
     <div class="menu-card">
       <img src="https://as1.ftcdn.net/v2/jpg/01/42/70/66/1000_F_142706641_pDs13MNNEkoP8fmLkqmbFf7rnEq1zNwe.jpg" alt="Idli Sambar">
-      <h3>Idli Sambar</h3>
-      <p>Soft idlis with aromatic sambar and coconut chutney.</p>
+      <div>
+        <h3>Idli Sambar</h3>
+        <p>Soft idlis served with hot sambar.</p>
+      </div>
     </div>
+
     <div class="menu-card">
       <img src="https://as1.ftcdn.net/v2/jpg/01/61/64/70/1000_F_161647021_oKvLcWMmMoyfvsfJ6ZVJVjEpdByyTGR8.jpg" alt="Medu Vada">
-      <h3>Vada</h3>
-      <p>Golden fried lentil donuts, crunchy and flavorful.</p>
+      <div>
+        <h3>Vada</h3>
+        <p>Golden fried lentil donuts, crunchy and flavorful.</p>
+      </div> 
     </div>
+
     <div class="menu-card">
       <img src="https://as1.ftcdn.net/v2/jpg/18/39/62/58/1000_F_1839625888_fFFQ8v04wWU9H8guT6mGqu9ybr10TMVG.jpg" alt="Uttapam">
-      <h3>Uttapam</h3>
-      <p>Thick pancake topped with onion, tomato & spices.</p>
+      <div>
+        <h3>Uttapam</h3>
+        <p>Thick pancake topped with onion, tomato & spices.</p>
+      </div>
     </div>
+
     <div class="menu-card">
       <img src="https://as1.ftcdn.net/v2/jpg/18/23/33/00/1000_F_1823330047_qEtmpwB5e0V9W46IbzCvy4jf3f4BuM1z.jpg" alt="Pongal">
-      <h3>Pongal</h3>
-      <p>Comforting rice & lentil delicacy from South India.</p>
+      <div>
+          <h3>Pongal</h3>
+          <p>Comforting rice & lentil delicacy from South India.</p>
+      </div>
     </div>
+    
     <div class="menu-card">
       <img src="https://as1.ftcdn.net/v2/jpg/06/58/79/20/1000_F_658792060_aUBCGKkSsWyaDP08TN1L2m5zvtkmJwQB.jpg" alt="Filter Coffee">
-      <h3>Filter Coffee</h3>
-      <p>Authentic filter coffee.</p>
+      <div>
+          <h3>Filter Coffee</h3>
+          <p>Authentic filter coffee.</p>
+      </div>
     </div>
   </div>
 </section>
