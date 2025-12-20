@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dakshin Dwar | Modern South Indian Restaurant</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+body{background:#fffaf5;color:#2c2c2c;overflow-x:hidden}
+header{height:100vh;background:linear-gradient(120deg,rgba(0,0,0,.65),rgba(0,0,0,.35)),url('https://images.unsplash.com/photo-1540189549336-e6e99c3679fe') center/cover fixed;position:relative;color:#fff}
+nav{position:absolute;top:0;width:100%;padding:25px 8%;display:flex;justify-content:space-between;align-items:center;z-index:10}
+.logo{font-size:1.8rem;font-weight:700;color:#ffd27d}
+.nav-btns a{margin-left:25px;text-decoration:none;color:#fff;font-weight:500;transition:.3s}
+.nav-btns a:hover{color:#ffd27d}
+.hero{height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;animation:fadeIn 2s}
+.hero h1{font-size:4.2rem;letter-spacing:4px;color:#ffd27d}
+.hero p{font-size:1.3rem;margin:20px 0 40px}
+.hero-actions a{padding:15px 35px;border-radius:40px;text-decoration:none;font-weight:600;margin:0 10px;transition:.4s}
+.primary{background:#ffd27d;color:#2c2c2c}
+.secondary{border:2px solid #fff;color:#fff}
+.hero-actions a:hover{transform:translateY(-4px) scale(1.05)}
+section{padding:90px 10%;animation:slideUp 1.5s}
+h2{text-align:center;margin-bottom:50px;font-size:2.6rem;color:#8b4513}
+.menu{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:35px}
+.menu-card{background:#fff;border-radius:22px;overflow:hidden;box-shadow:0 15px 35px rgba(0,0,0,.1);transition:.45s}
+.menu-card img{width:100%;height:190px;object-fit:cover;transition:transform .6s}}
+.menu-card:hover{transform:translateY(-12px) scale(1.04);box-shadow:0 25px 50px rgba(0,0,0,.18)}
+.menu-card h3{color:#d2691e;margin-bottom:12px}
+.booking{background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),url('https://images.unsplash.com/photo-1551218808-94e220e084d2') center/cover;border-radius:35px;color:#fff;padding:80px 8%}
+.booking form{max-width:600px;margin:auto;display:grid;gap:20px}
+.booking input,.booking button{padding:14px 18px;border-radius:30px;border:none;font-size:1rem}
+.booking button{background:#ffd27d;font-weight:600;cursor:pointer}
+.booking button:hover{transform:scale(1.05)}
+.contact{background:linear-gradient(rgba(255,255,255,.92),rgba(255,255,255,.92)),url('https://images.unsplash.com/photo-1504674900247-0877df9cc836') center/cover;border-radius:35px;text-align:center;padding:80px 8%}
+.contact form{max-width:550px;margin:30px auto;display:grid;gap:18px}
+.contact input,.contact textarea,.contact button{padding:14px 18px;border-radius:30px;border:1px solid #ccc;font-size:1rem}
+.contact textarea{resize:none;height:110px}
+.contact button{background:#8b4513;color:#fff;border:none;font-weight:600;cursor:pointer}
+.contact button:hover{transform:scale(1.05)}
+footer{background:#2c2c2c;color:#fff;text-align:center;padding:25px;margin-top:80px}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+.map-bar{margin-top:45px;display:flex;justify-content:space-between;align-items:center;background:linear-gradient(135deg,#8b4513,#d2691e);padding:24px 32px;border-radius:22px;box-shadow:0 25px 50px rgba(0,0,0,.28)}
+.map-text span{font-size:.85rem;color:#ffd27d;letter-spacing:1px}
+.map-text strong{display:block;font-size:1.25rem;color:#fff;margin-top:4px}
+.map-btn{background:#fff;color:#8b4513;padding:15px 34px;border-radius:45px;text-decoration:none;font-weight:600;transition:.45s}
+.map-btn:hover{transform:translateY(-4px) scale(1.07);box-shadow:0 12px 30px rgba(0,0,0,.3)}
+
+@keyframes slideUp{from{opacity:0;transform:translateY(70px)}to{opacity:1;transform:translateY(0)}}
+</style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <div class="logo">Dakshin Dwar</div>
+    <div class="nav-btns">
+      <a href="#menu">Menu</a>
+      <a href="#book">Book Table</a>
+      <a href="#contact">Call Us</a>
+    </div>
+  </nav>
+  <div class="hero">
+    <h1>Dakshin Dwar</h1>
+    <p>A Modern South Indian Culinary Experience</p>
+    <div class="hero-actions">
+      <a href="#book" class="primary">Book a Table</a>
+      <a href="#contact" class="secondary">Call Us</a>
+    </div>
+  </div>
+</header>
+
+<section id="menu">
+  <h2>Our Signature Menu</h2>
+  <div class="menu">
+    <div class="menu-card">
+        <img 
+            src="https://as1.ftcdn.net/v2/jpg/15/63/72/20/1000_F_1563722045_ELWXZ61UFU5XZXYclooZwrAqwCwZJg5F.jpg"
+            alt="Dosa">
+      <h3>Dosa</h3>
+      <p>Crispy dosa with served with chutney & sambar.</p>
+    </div>
+    <div class="menu-card">
+      <img src="https://as1.ftcdn.net/v2/jpg/01/42/70/66/1000_F_142706641_pDs13MNNEkoP8fmLkqmbFf7rnEq1zNwe.jpg" alt="Idli Sambar">
+      <h3>Idli Sambar</h3>
+      <p>Soft idlis with aromatic sambar and coconut chutney.</p>
+    </div>
+    <div class="menu-card">
+      <img src="https://as1.ftcdn.net/v2/jpg/01/61/64/70/1000_F_161647021_oKvLcWMmMoyfvsfJ6ZVJVjEpdByyTGR8.jpg" alt="Medu Vada">
+      <h3>Vada</h3>
+      <p>Golden fried lentil donuts, crunchy and flavorful.</p>
+    </div>
+    <div class="menu-card">
+      <img src="https://as1.ftcdn.net/v2/jpg/18/39/62/58/1000_F_1839625888_fFFQ8v04wWU9H8guT6mGqu9ybr10TMVG.jpg" alt="Uttapam">
+      <h3>Uttapam</h3>
+      <p>Thick pancake topped with onion, tomato & spices.</p>
+    </div>
+    <div class="menu-card">
+      <img src="https://as1.ftcdn.net/v2/jpg/18/23/33/00/1000_F_1823330047_qEtmpwB5e0V9W46IbzCvy4jf3f4BuM1z.jpg" alt="Pongal">
+      <h3>Pongal</h3>
+      <p>Comforting rice & lentil delicacy from South India.</p>
+    </div>
+    <div class="menu-card">
+      <img src="https://as1.ftcdn.net/v2/jpg/06/58/79/20/1000_F_658792060_aUBCGKkSsWyaDP08TN1L2m5zvtkmJwQB.jpg" alt="Filter Coffee">
+      <h3>Filter Coffee</h3>
+      <p>Authentic filter coffee.</p>
+    </div>
+  </div>
+</section>
+
+<section id="book" class="booking">
+  <h2>Book a Table</h2>
+  <form>
+    <input type="text" placeholder="Your Name" required>
+    <input type="tel" placeholder="Phone Number" required>
+    <input type="date" required>
+    <input type="time" required>
+    <button type="submit">Reserve Now</button>
+  </form>
+</section>
+
+<section id="contact" class="contact">
+  <h2>Call Us / Contact</h2>
+  <p>Dwarka Residency, AS-13, near Chetak Bridge,<br>Kasturba Nagar, Ratlam, Madhya Pradesh</p>
+
+  <form>
+    <input type="text" placeholder="Your Name" required>
+    <input type="tel" placeholder="Phone Number" required>
+    <textarea placeholder="Your Message / Preferred Time"></textarea>
+    <button type="submit">Request a Call Back</button>
+  </form>
+
+  <div class="map-bar">
+    <div class="map-text">
+      <span>📍 Our Location</span>
+      <strong>Dakshin Dwar, Ratlam</strong>
+    </div>
+    <a href="https://www.google.com/maps/dir//Dwarka+Residency,+AS-13,+near+Chetak+Bridge,+Kasturba+Nagar,+Ratlam,+Madhya+Pradesh+457001/@18.5369849,73.806616,15z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3963ff25926bf917:0xff5453fe497b4a82!2m2!1d75.0336709!2d23.337119?entry=ttu" target="_blank" class="map-btn">Open in Google Maps</a>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 Dakshin Dwar | Crafted with South Indian Flavors</p>
+</footer>
+
+</body>
+</html>
