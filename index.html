@@ -441,11 +441,20 @@
 
 <section id="book" class="booking">
   <h2>Book a Table</h2>
-  <form>
-    <input type="text" placeholder="Your Name" required>
-    <input type="tel" placeholder="Phone Number" required>
-    <input type="date" required>
-    <input type="time" required>
+
+  <form action="https://formsubmit.co/jack738847@gmail.com" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="tel" name="phone" placeholder="Phone Number" required>
+
+    <label style="color:#ffd27d;margin-left:10px;">Select Date</label>
+    <input type="date" name="date" required>
+
+    <label style="color:#ffd27d;margin-left:10px;">Select Time</label>
+    <input type="time" name="time" required>
+
+    <input type="hidden" name="_subject" value="New Table Booking - Dakshin Dwar">
+    <input type="hidden" name="_captcha" value="false">
+
     <button type="submit">Reserve Now</button>
   </form>
 </section>
@@ -454,10 +463,14 @@
   <h2>Call Us / Contact</h2>
   <p>Dwarka Residency, AS-13, near Chetak Bridge,<br>Ratlam, Madhya Pradesh</p>
 
-  <form>
-    <input type="text" placeholder="Your Name" required>
-    <input type="tel" placeholder="Phone Number" required>
-    <textarea placeholder="Your Message"></textarea>
+  <form action="https://formsubmit.co/jack738847@gmail.com" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="tel" name="phone" placeholder="Phone Number" required>
+    <textarea name="message" placeholder="Your Message"></textarea>
+
+    <input type="hidden" name="_subject" value="Call Back Request - Dakshin Dwar">
+    <input type="hidden" name="_captcha" value="false">
+
     <button type="submit">Request a Call Back</button>
   </form>
 
